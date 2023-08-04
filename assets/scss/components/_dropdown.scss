@@ -1,0 +1,22 @@
+.dropdown-selection {
+  &-title {
+    border-left: 0.8rem solid $primary-light-1;
+
+    @include md {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-subtitle {
+    white-space: nowrap;
+    @include md {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-list {
+    width: 30.4rem;
+    font-size: 1.8rem;
+    opacity: 0.75;
+  }
+}

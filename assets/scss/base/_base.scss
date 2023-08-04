@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  // outline: 1px solid green;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
+}
+
+body {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+a:hover,
+input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  color: $grey-dark-3;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 6px 12px;
+  outline-color: $primary;
+  background-color: transparent;
+  border: 0.1rem solid $grey-light-1;
+}
+
+iframe {
+  display: block;
+}

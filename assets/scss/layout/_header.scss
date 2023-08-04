@@ -1,0 +1,33 @@
+.header {
+  &-logo {
+    width: 8rem;
+    height: 4.857rem;
+  }
+
+  @include md {
+    &-img {
+      width: 100%;
+      padding-top: 1.6rem;
+      padding-bottom: 1.54rem;
+      padding-left: 1.2rem;
+    }
+
+    .navbar-brand {
+      width: 100%;
+    }
+
+    .navbar-nav {
+      width: 100%;
+      font-size: 1.6rem;
+    }
+    .nav-item {
+      width: 50%;
+      text-align: center;
+      margin: 0;
+      border: 0.1rem solid #fff;
+      a {
+        padding: 1.2rem 0;
+      }
+    }
+  }
+}

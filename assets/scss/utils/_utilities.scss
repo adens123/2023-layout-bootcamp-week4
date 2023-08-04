@@ -1,0 +1,196 @@
+// padding
+// 8 16 24 32 48 80 96
+// btn 6 12
+// 25
+
+// margin
+// 8 16 24 32 40 48 64 80
+// 4
+
+// font
+// 16 20 24 32 36 48 64
+// card 14
+// pager 18 19
+// some page h1 42
+
+@use "sass:math";
+
+// padding
+//--------------------------
+// p, pl, pr, pt, pb, 0~12
+$padding-list: (
+  "p": "padding",
+  "pl": "padding-left",
+  "pr": "padding-right",
+  "pt": "padding-top",
+  "pb": "padding-bottom",
+);
+
+// p*-0 ~ p*-12
+@each $key, $value in $padding-list {
+  @for $i from 0 through 12 {
+    // p*-0 ~ p*-12
+    .#{$key}-#{$i} {
+      #{$value}: $base-padding * $i;
+    }
+  }
+  @for $i from 0 through 12 {
+    // p*-lg-0 ~ p*-lg-12
+    @include lg {
+      .#{$key}-lg-#{$i} {
+        #{$value}: $base-padding * $i;
+      }
+    }
+  }
+  @for $i from 0 through 12 {
+    // p*-md-0 ~ p*-md-12
+    @include md {
+      .#{$key}-md-#{$i} {
+        #{$value}: $base-padding * $i;
+      }
+    }
+  }
+}
+
+.py-12 {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.py-25 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+// margin
+// --------------------------
+// m, ml, mr, mt, mb, 0~10
+$margin-list: (
+  "m": "margin",
+  "ml": "margin-left",
+  "mr": "margin-right",
+  "mt": "margin-top",
+  "mb": "margin-bottom",
+);
+
+// m*-0 ~ m*-10
+@each $key, $value in $margin-list {
+  @for $i from 0 through 10 {
+    // m*-0 ~ m*-10
+    .#{$key}-#{$i} {
+      #{$value}: $base-margin * $i;
+    }
+  }
+  @for $i from 0 through 10 {
+    // m*-lg-0 ~ m*-lg-10
+    @include lg {
+      .#{$key}-lg-#{$i} {
+        #{$value}: $base-margin * $i;
+      }
+    }
+  }
+  @for $i from 0 through 10 {
+    // m*-md-0 ~ m*-md-10
+    @include md {
+      .#{$key}-md-#{$i} {
+        #{$value}: $base-margin * $i;
+      }
+    }
+  }
+}
+
+.mb-sm {
+  margin-bottom: 0.4rem;
+}
+
+.mx-atuo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+// font-size
+// --------------------------
+
+// $base-font-size = 1.6rem = 16px
+@for $i from 1 through 16 {
+  .fz-#{$i} {
+    // 4的倍數：4px, 8px, 16px...= 0.4rem, 0.8rem, 1.6rem...
+    font-size: math.div($base-font-size, 4) * $i;
+  }
+}
+
+.fz-extra-14 {
+  font-size: 1.4rem;
+}
+
+// font-color
+// --------------------------
+
+.text-primary {
+  color: $primary;
+}
+
+.text-primary-dark {
+  color: $primary-dark;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-grey-dark-2 {
+  color: $grey-dark-2;
+}
+
+.text-grey-dark-5 {
+  color: $grey-dark-5;
+}
+
+// font-style
+.text-italic {
+  font-style: italic;
+}
+
+// font-position
+.text-center {
+  text-align: center;
+}
+
+// font-weight
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+// background color
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-primary-dark {
+  background-color: $primary-dark;
+}
+
+.bg-primary-light-2 {
+  background-color: $primary-light-2;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+// sizing
+.w-100 {
+  width: 100%;
+}

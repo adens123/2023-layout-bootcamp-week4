@@ -1,0 +1,70 @@
+.footer {
+  @include md {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-list {
+      display: none;
+    }
+  }
+
+  .social-item {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    @include lg {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @include md {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  .contact {
+    font-family: "Noto Sans TC", sans-serif;
+
+    @include md {
+      font-size: 1.6rem;
+      order: -1;
+      .material-icons-outlined {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 0.1rem solid #fff;
+
+    @include md {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 1.6rem;
+      padding-bottom: 0;
+
+      &-content {
+        margin-bottom: 0.8rem;
+      }
+
+      &-item:first-child {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &-list {
+      font-size: 1.4rem;
+
+      @include md {
+        font-size: 1.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

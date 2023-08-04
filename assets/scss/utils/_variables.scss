@@ -1,0 +1,38 @@
+@use "sass:math";
+
+// colors
+$primary: #aa0601;
+$primary-dark: #650300;
+$primary-light-1: #9f1213;
+$primary-light-2: #fbf2f2;
+
+$secondary-dark: #5f3e2d;
+$secondary-light: #b75929;
+
+$grey-dark-1: #0a0a0a;
+$grey-dark-2: #212529;
+$grey-dark-3: #495057;
+$grey-dark-4: #555555;
+$grey-dark-5: #707070;
+
+$grey-light-1: #ced4da;
+$grey-light-2: #dcdcdc;
+$grey-light-3: #dee2e6;
+$grey-light-4: #f2f2f2;
+
+$white: #fff;
+$black: #000;
+
+// spacing
+$base-padding: 0.8rem;
+$base-margin: 0.8rem;
+
+// borders
+$base-border-width: 0.1rem;
+$base-border-radius: 2rem;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+// font-size
+$base-font-size: 1.6rem; // 1rem = 10px

@@ -1,0 +1,141 @@
+.hero {
+  height: 78.7rem;
+  background-image: url("/assets/images/home-header.png");
+  background-position: center center;
+  background-size: cover;
+
+  &-btn {
+    padding: 0.6rem 1.2rem;
+  }
+
+  &-text {
+    height: 100%;
+  }
+
+  @include lg {
+    background-image: url("/assets/images/home-header-sm.png");
+  }
+
+  @include md {
+    height: 39.6rem;
+
+    &-title {
+      font-size: 2.4rem;
+    }
+
+    &-subtitle {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.feature {
+  &-img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @include md {
+    &-title {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.classic {
+  @include md {
+    &-title {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-list {
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-item {
+    @include lg {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.design {
+  background: url("/assets/images/index-bg.png") center center / cover;
+
+  @include lg {
+    background-image: url("/assets/images/index-bg-sm.png");
+    background-position: center top;
+
+    &-item:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include md {
+    &-title {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.recommend {
+  @include md {
+    &-title {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-list {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+
+    @include lg {
+      margin-bottom: -2.4rem;
+    }
+  }
+
+  &-item {
+    width: calc(25% - 2.4rem);
+    min-height: 51.1rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    border: 0.1rem solid #dee2e6;
+    border-radius: 0.4rem;
+    box-shadow: 0rem 0.2rem 0.6rem #00000029;
+
+    @include lg {
+      width: calc(50% - 2.4rem);
+    }
+
+    @include md {
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.contactMe {
+  &-title {
+    @include md {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-text {
+    @include lg {
+      font-size: 1.6rem;
+    }
+  }
+
+  &-form-submit {
+    border: none;
+  }
+}

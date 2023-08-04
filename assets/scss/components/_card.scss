@@ -1,0 +1,55 @@
+@use "sass:math";
+
+// 還不知道要如何套用比較適合，基本版遇到變化版型時要如何修改比較順手？
+// card base style
+// ----------------------------
+.card {
+  display: block;
+  border: $base-border-width solid #ddd;
+  // box-shadow: $base-box-shadow;
+  // border-radius: math.div($base-border-radius, 4);
+
+  &-body {
+    padding: $base-padding;
+  }
+
+  &-title {
+    font-size: $base-font-size;
+    font-weight: bold;
+    padding-bottom: $base-padding;
+  }
+
+  &-text {
+    font-size: $base-font-size;
+  }
+}
+
+// store card
+// ---------------------------------
+.store {
+  &-img {
+    min-height: 22.4rem;
+    object-fit: cover;
+  }
+
+  &-title,
+  &-list {
+    border: 0.1rem solid rgba(0, 0, 0, 0.125);
+  }
+
+  &-list {
+    border-top: none;
+  }
+
+  &-google {
+    @include lg {
+      height: 41.4rem;
+    }
+
+    @include md {
+      max-height: 20.8rem;
+    }
+  }
+}
+
+// @debug "test";
