@@ -1,0 +1,65 @@
+.blog {
+  &-header {
+    @include md {
+      display: none;
+    }
+  }
+
+  &-img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &-title {
+    @include lg {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-subtitle {
+    @include lg {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+
+  &-text {
+    @include lg {
+      font-size: 1.6rem;
+
+      display: -webkit-box;
+      overflow: hidden;
+      // text-overflow: ellipsis; // 顯示...
+
+      -webkit-line-clamp: 6; // 想顯示的行數
+      -webkit-box-orient: vertical;
+    }
+    @include md {
+      display: none;
+    }
+  }
+
+  &-btn {
+    @include lg {
+      display: none;
+    }
+  }
+}
+
+.search-icon {
+  font-size: 3rem;
+}
+
+.pager {
+  padding-top: 12.4rem;
+  @include lg {
+    padding-top: 8rem;
+  }
+  @include md {
+    padding-top: 6.4rem;
+  }
+}

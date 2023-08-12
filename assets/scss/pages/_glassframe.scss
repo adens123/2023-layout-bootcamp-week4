@@ -1,0 +1,120 @@
+.tab {
+  @include lg {
+    font-size: 2.4rem;
+  }
+
+  @include md {
+    font-size: 1.6rem;
+  }
+
+  &-open {
+    display: block;
+  }
+
+  &-close {
+    display: none;
+  }
+
+  &-item {
+    border: 0.1rem solid $grey-light-2;
+
+    &--current,
+    &:hover {
+      border-bottom: 0.8rem solid $primary;
+    }
+  }
+
+  &-content {
+    margin-bottom: -8rem;
+
+    @include lg {
+      margin-bottom: -4rem;
+    }
+
+    @include md {
+      margin-bottom: -2.4rem;
+    }
+  }
+}
+
+.product-header {
+  &-img {
+    height: 29.6rem;
+    object-fit: cover;
+
+    @include lg {
+      width: 100%;
+    }
+
+    @include md {
+      height: 13.6rem;
+    }
+  }
+}
+
+.product-title {
+  font-size: 4.2rem;
+  @include md {
+    font-size: 2.4rem;
+  }
+}
+
+.product-subtitle {
+  @include md {
+    font-size: 2.4rem;
+  }
+}
+
+.product-color {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+  &-1 {
+    background-color: $secondary-dark;
+  }
+  &-2 {
+    background-color: $secondary-light;
+  }
+}
+
+.pagination {
+  color: $grey-dark-4;
+
+  @include md {
+    width: 100%;
+  }
+
+  .page-item {
+    font-size: 1.8rem;
+    text-align: center;
+    flex-grow: 1;
+    border: 0.1rem solid $grey-dark-4;
+    &:not(:last-child) {
+      border-right: none;
+    }
+    &:hover,
+    &--current {
+      color: $white;
+      background-color: $black;
+    }
+
+    @include md {
+      font-size: 1.6rem;
+    }
+
+    &:first-child .page-link,
+    &:last-child .page-link {
+      padding: 1.2rem;
+      @include md {
+        padding: 1.2rem 0;
+      }
+    }
+
+    &:not(:first-child, :last-child) .page-link {
+      padding: 1.2rem 1.6rem;
+      @include md {
+        padding: 1.2rem 0;
+      }
+    }
+  }
+}

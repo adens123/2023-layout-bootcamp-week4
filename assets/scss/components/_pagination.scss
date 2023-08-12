@@ -1,0 +1,41 @@
+.pagination {
+  color: $grey-dark-4;
+
+  @include md {
+    width: 100%;
+  }
+
+  .page-item {
+    font-size: 1.8rem;
+    text-align: center;
+    flex-grow: 1;
+    border: 0.1rem solid $grey-dark-4;
+    &:not(:last-child) {
+      border-right: none;
+    }
+    &:hover,
+    &--current {
+      color: $white;
+      background-color: $black;
+    }
+
+    @include md {
+      font-size: 1.6rem;
+    }
+
+    &:first-child .page-link,
+    &:last-child .page-link {
+      padding: 1.2rem;
+      @include md {
+        padding: 1.2rem 0;
+      }
+    }
+
+    &:not(:first-child, :last-child) .page-link {
+      padding: 1.2rem 1.6rem;
+      @include md {
+        padding: 1.2rem 0;
+      }
+    }
+  }
+}

@@ -57,6 +57,11 @@ $padding-list: (
   padding-bottom: 1.2rem;
 }
 
+.py-13 {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
 .py-25 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -72,6 +77,27 @@ $margin-list: (
   "mt": "margin-top",
   "mb": "margin-bottom",
 );
+
+.mb-sm {
+  margin-bottom: 0.4rem;
+}
+
+.mb-60 {
+  margin-bottom: 6rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
 
 // m*-0 ~ m*-10
 @each $key, $value in $margin-list {
@@ -97,19 +123,6 @@ $margin-list: (
       }
     }
   }
-}
-
-.mb-sm {
-  margin-bottom: 0.4rem;
-}
-
-.mx-atuo {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mb-auto {
-  margin-bottom: auto;
 }
 
 // font-size
@@ -148,6 +161,10 @@ $margin-list: (
 
 .text-grey-dark-2 {
   color: $grey-dark-2;
+}
+
+.text-grey-dark-4 {
+  color: $grey-dark-4;
 }
 
 .text-grey-dark-5 {
